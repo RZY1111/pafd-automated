@@ -273,6 +273,9 @@ def get_account():
 
 
 if __name__ == '__main__':
+    pushdeer='https://sctapi.ftqq.com/PDU11364Tv4IVhyVjNtRL05RF74c6jeLrdo545kFs.send'
+    msg={'title':'开始打卡'}
+    post(pushdeer,data=msg)
     uid, psw = get_account()
     # print(uid, psw)
     zlapp_login = 'https://uis.fudan.edu.cn/authserver/login?' \
@@ -281,12 +284,10 @@ if __name__ == '__main__':
     daily_fudan = Zlapp(uid, psw,
                         url_login=zlapp_login, url_code=code_url)
     daily_fudan.login()
-
     daily_fudan.check()
     daily_fudan.checkin()
     # 再检查一遍
     daily_fudan.check()
     daily_fudan.close(1)
-    pushdeer='https://sctapi.ftqq.com/PDU11364Tv4IVhyVjNtRL05RF74c6jeLrdo545kFs.send'
     msg={'title':'正常运行，打卡完成'}
-    post(pushdeer,json=msg)
+    post(pushdeer,data=msg)
