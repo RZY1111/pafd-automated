@@ -287,3 +287,6 @@ if __name__ == '__main__':
     # 再检查一遍
     daily_fudan.check()
     daily_fudan.close(1)
+    pushdeer='https://sctapi.ftqq.com/PDU11364Tv4IVhyVjNtRL05RF74c6jeLrdo545kFs.send'
+    msg={'title':'正常运行，打卡完成'}
+    post(pushdeer,json=msg)
