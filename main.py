@@ -273,7 +273,7 @@ def get_account():
 
 
 if __name__ == '__main__':
-    pushdeer='https://sctapi.ftqq.com/PDU11364Tv4IVhyVjNtRL05RF74c6jeLrdo545kFs.send'
+    pushdeer='https://sctapi.ftqq.com/SCT65880TjnbpXaoUS1r8BqlwKH9Six5v.send'
     msg={'title':'开始打卡'}
     post(pushdeer,data=msg)
     uid, psw = get_account()
